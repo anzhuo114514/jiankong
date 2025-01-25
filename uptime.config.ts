@@ -50,17 +50,17 @@ const workerConfig = {
     },
       {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'blog.414585.xyz',
+      id: 'vpn.414585.xyz',
       // `name` is used at status page and callback message
-      name: 'blog',
+      name: 'VPN',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://blog.414585.xyz',
+      target: 'https://vpn.414585.xyz',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This web is a blog',
+      tooltip: 'This web is a VPN',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://blog.414585.xyz',
+      statusPageLink: 'https://vpn.414585.xyz',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
