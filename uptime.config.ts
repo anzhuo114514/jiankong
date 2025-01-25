@@ -3,9 +3,9 @@ const pageConfig = {
   title: "anzhuo's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://blog.414585.xyz', label: '个人博客', highlight: true },
-    { link: 'https://img.414585.xyz/', label: '个人图床' },
-    { link: 'https://cdn.414585.xyz/', label: 'CDN' },
+    { link: 'https://blog.414585.xyz', label: 'blog', highlight: true },
+    //{ link: 'https://img.414585.xyz/', label: '个人图床' },
+   // { link: 'https://cdn.414585.xyz/', label: 'CDN' },
   //  { link: 'https://809098.xyz', label: '免费节点'},
   ],
 }
@@ -48,16 +48,76 @@ const workerConfig = {
       // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
       // checkLocationWorkerRoute: 'https://am.809098.xyz',
     },
+      {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'blog.414585.xyz',
+      // `name` is used at status page and callback message
+      name: 'blog',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://blog.414585.xyz',
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      tooltip: 'This web is a blog',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://blog.414585.xyz',
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      // expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+      // [OPTIONAL] headers to be sent
+      // headers: {
+      //   'User-Agent': 'Uptimeflare',
+      //   Authorization: 'Bearer YOUR_TOKEN_HERE',
+      // },
+      // [OPTIONAL] body to be sent
+      // body: 'Hello, world!',
+      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
+      // responseKeyword: 'success',
+      // [OPTIONAL] if specified, the check will run in your specified region,
+      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
+      // checkLocationWorkerRoute: 'https://am.809098.xyz',
+    },
+      {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'img.414585.xyz',
+      // `name` is used at status page and callback message
+      name: 'Picture bed server',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://img.414585.xyz',
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      tooltip: 'This web is a Picture bed server',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://blog.414585.xyz',
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      // expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+      // [OPTIONAL] headers to be sent
+      // headers: {
+      //   'User-Agent': 'Uptimeflare',
+      //   Authorization: 'Bearer YOUR_TOKEN_HERE',
+      // },
+      // [OPTIONAL] body to be sent
+      // body: 'Hello, world!',
+      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
+      // responseKeyword: 'success',
+      // [OPTIONAL] if specified, the check will run in your specified region,
+      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
+      // checkLocationWorkerRoute: 'https://am.809098.xyz',
+    },
     // Example TCP Monitor
     {
-      id: '809098.xyz',
-      name: 'Blog',
+      id: 'cdn.414585.xyz',
+      name: 'CDN / Images and Files',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'GET',
       // `target` should be `host:port` for tcp monitors
-      target: 'https://809098.xyz',
-      tooltip: 'My production server monitor',
-      statusPageLink: 'https://809098.xyz',
+      target: 'https://cdn.414585.xyz',
+      tooltip: 'This web is a Images and Files',
+      statusPageLink: 'https://cdn.414585.xyz',
       timeout: 10000,
     },
   ],
