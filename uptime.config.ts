@@ -52,15 +52,45 @@ const workerConfig = {
       // `id` should be unique, history will be kept if the `id` remains constant
       id: 'vpn.414585.xyz',
       // `name` is used at status page and callback message
-      name: 'VPN',
+      name: 'VPN Zone 1 (Private)',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
       target: 'https://vpn.414585.xyz',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This web is a VPN',
+      tooltip: 'This service is not publicly available',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://vpn.414585.xyz',
+      // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
+      // expectedCodes: [200],
+      // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
+      timeout: 10000,
+      // [OPTIONAL] headers to be sent
+      // headers: {
+      //   'User-Agent': 'Uptimeflare',
+      //   Authorization: 'Bearer YOUR_TOKEN_HERE',
+      // },
+      // [OPTIONAL] body to be sent
+      // body: 'Hello, world!',
+      // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
+      // responseKeyword: 'success',
+      // [OPTIONAL] if specified, the check will run in your specified region,
+      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
+      // checkLocationWorkerRoute: 'https://am.809098.xyz',
+    },
+    {
+      // `id` should be unique, history will be kept if the `id` remains constant
+      id: 'vpn1.414585.xyz',
+      // `name` is used at status page and callback message
+      name: 'VPN Zone 2 (Private)',
+      // `method` should be a valid HTTP Method
+      method: 'GET',
+      // `target` is a valid URL
+      target: 'https://vpn1.414585.xyz',
+      // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
+      tooltip: 'This service is not publicly available',
+      // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
+      statusPageLink: 'https://vpn1.414585.xyz',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
@@ -88,9 +118,9 @@ const workerConfig = {
       // `target` is a valid URL
       target: 'https://img.414585.xyz',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This web is a Picture bed server',
+      tooltip: 'The images of this server are saved in Telegram',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://blog.414585.xyz',
+      statusPageLink: 'https://img.414585.xyz',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
